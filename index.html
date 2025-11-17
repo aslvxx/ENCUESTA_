@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>!Cuentanós tu Experiencia¡ </h2>
+        <form action="https://script.google.com/macros/s/AKfycbx5DwFijky9XzzEkiLUg1vIRn3JSAsKoVOZvrd-IvafNr1Yh6bDeQCtMR_5B1DB_UlxHQ/exec" method="POST">
+            <div class="question-card">
+                <label>¿Cómo calificarías tu experiencia general jugando este juego?</label>
+
+                <div class="rating-wrapper">
+                    <div class="rating-stars">
+
+                        <input type="radio" id="star10" name="calificacion" value="10" required>
+                        <label for="star10" title="10"></label>
+
+                        <input type="radio" id="star9" name="calificacion" value="9">
+                        <label for="star9" title="9"></label>
+
+                        <input type="radio" id="star8" name="calificacion" value="8">
+                        <label for="star8" title="8"></label>
+
+                        <input type="radio" id="star7" name="calificacion" value="7">
+                        <label for="star7" title="7"></label>
+
+                        <input type="radio" id="star6" name="calificacion" value="6">
+                        <label for="star6" title="6"></label>
+
+                        <input type="radio" id="star5" name="calificacion" value="5">
+                        <label for="star5" title="5"></label>
+
+                        <input type="radio" id="star4" name="calificacion" value="4">
+                        <label for="star4" title="4"></label>
+
+                        <input type="radio" id="star3" name="calificacion" value="3">
+                        <label for="star3" title="3"></label>
+
+                        <input type="radio" id="star2" name="calificacion" value="2">
+                        <label for="star2" title="2"></label>
+
+                        <input type="radio" id="star1" name="calificacion" value="1">
+                        <label for="star1" title="1"></label>
+
+                    </div>
+
+                    <div class="rating-numbers">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <label for="implementacion">¿Qué nuevas funciones o ideas te gustaría que se implementaran en el juego?</label>
+                <textarea id="implementacion" name="implementacion" required></textarea>
+            </div>
+
+            <div class="question-card">
+                <label for="mejoras">¿Qué aspectos consideras que podrían mejorarse?</label>
+                <textarea id="mejoras" name="mejoras" required></textarea>
+            </div>
+
+            <button type="submit">Enviar respuestas</button>
+        </form>
+    </div>
+</body>
+</html>
