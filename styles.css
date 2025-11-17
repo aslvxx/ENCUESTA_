@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Press Start 2P", cursive;
+    color: #fbf8b5;
+    background: url("fondo.gif") center center / cover fixed no-repeat;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 15px 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cuadros de preguntas */
+.question-card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.question-card label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+/* Inputs y textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: rgba(20, 20, 20, 0.9);
+    color: #fff;
+    resize: vertical;
+    min-height: 90px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #f1c40f;
+    box-shadow: 0 0 0 1px #f1c40f;
+}
+
+/* Botón */
+button {
+    margin-top: 10px;
+    align-self: center;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f1c40f, #f39c12);
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- RATING 1–10 CON ESTRELLAS ---------- */
+
+.rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 26px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.rating-stars label::before {
+    content: "☆";
+}
+
+.rating-stars input:checked ~ label::before,
+.rating-stars label:hover::before,
+.rating-stars label:hover ~ label::before {
+    content: "★";
+    color: #f1c40f;
+}
+
+.rating-stars label:hover {
+    transform: translateY(-2px);
+}
+
+/* Números 1-10 */
+.rating-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.rating-numbers span {
+    width: 16px;
+    text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .rating-stars {
+        gap: 4px;
+    }
+    .rating-stars label {
+        font-size: 22px;
+    }
+    .rating-numbers {
+        gap: 10px;
+    }
+}
